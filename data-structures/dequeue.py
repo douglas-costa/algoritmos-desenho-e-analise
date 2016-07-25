@@ -33,6 +33,8 @@ class Dequeue:
 
         self.length += 1
 
+        return True
+
     def unshift(self, value):
         node = self.Node(value)
 
@@ -45,6 +47,8 @@ class Dequeue:
             self.head = node
 
         self.length += 1
+
+        return True
 
     def pop(self):
         if self.empty():

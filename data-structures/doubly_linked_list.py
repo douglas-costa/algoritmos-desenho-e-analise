@@ -50,9 +50,11 @@ class DoublyLinkedList:
 
         self.length += 1
 
+        return True
+
     def remove(self, index):
         if self.empty():
-            return None
+            return False
 
         if self.length == 1:
             self.head = None
@@ -80,6 +82,8 @@ class DoublyLinkedList:
                 self.tail = previous_node
 
         self.length -= 1
+
+        return True
 
     def elements(self):
         node = self.head

@@ -47,6 +47,8 @@ class LinkedList:
 
         self.length += 1
 
+        return True
+
     def remove(self, index):
         if self.empty():
             return False

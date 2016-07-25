@@ -18,11 +18,14 @@ class Queue:
         if self.empty():
             self.head = node
             self.tail = node
+
         else:
             self.tail.next = node
             self.tail      = node
 
         self.length += 1
+
+        return True
 
     def dequeue(self):
         if self.empty():
@@ -30,7 +33,6 @@ class Queue:
 
         node        = self.head
         self.head   = self.head.next
-
         self.length -= 1
 
         return node
